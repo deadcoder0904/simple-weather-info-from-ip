@@ -18,6 +18,6 @@ $(document).ready(function () {
         lat.text(result.coord.lat);
         long.text(result.coord.lon);
         desc.text(result.weather[0].description);
-        temp.text(Math.round(result.main.temp * 9.0/5 + 32) + " °F or " + result.main.temp + " °C");
+        temp.text(Math.round(result.main.temp * 9.0/5 - 459.67) + " °F or " + Math.round(result.main.temp - 273.15) + " °C");
     });
 });
